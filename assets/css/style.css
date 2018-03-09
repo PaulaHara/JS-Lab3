@@ -1,0 +1,77 @@
+.title {
+    text-align: center;
+}
+
+.pieces {
+    position: absolute;
+    position: absolute;
+    margin: auto;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 370px;
+    height: 470px;
+}
+
+.piece {
+    width: 120px;
+    height: 120px;
+    border: 1px solid black;
+    position: absolute;
+}
+
+#piece1 {
+    left: 0;
+    top: 0;
+}
+
+#piece2 {
+    left: 125px;
+    top: 0;
+}
+
+#piece3 {
+    left: 250px;
+    top: 0;
+}
+
+#piece4 {
+    left: 0;
+    top: 125px;
+}
+
+#piece5 {
+    left: 125px;
+    top: 125px;
+}
+
+#piece6 {
+    left: 250px;
+    top: 125px;
+}
+
+#piece7 {
+    left: 0;
+    top: 250px;
+}
+
+#piece8 {
+    left: 125px;
+    top: 250px;
+}
+
+#piece9 {
+    left: 250px;
+    top: 250px;
+}
+
+.number {
+    text-align: center;
+    margin-top: 45%;
+}
+
+.gameInfo {
+    position: absolute;
+    top: 380px;
+}

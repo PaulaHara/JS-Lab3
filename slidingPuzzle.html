@@ -1,0 +1,41 @@
+<!-- Paula Akemi Hara - Final Project -->
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+        <title>Sliding Puzzle</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        
+        <link rel="stylesheet" type="text/css" href="assets/css/style.css" />
+	</head>
+    
+    <body>
+        <div id="app">
+            <h1 class="title">Sliding Puzzle</h1>
+            <div class="pieces">
+                <div class="piece" id="piece1" @mouseover="mouseOver($event)" @mouseleave="mouseLeave($event)" @click="!gameHasEnded ? verifyPiece($event) : null" v-bind:style="stylePiece1"><p class="number">1</p></div>
+                <div class="piece" id="piece2" @mouseover="mouseOver($event)" @mouseleave="mouseLeave($event)" @click="!gameHasEnded ? verifyPiece($event) : null" v-bind:style="stylePiece2"><p class="number">2</p></div>
+                <div class="piece" id="piece3" @mouseover="mouseOver($event)" @mouseleave="mouseLeave($event)" @click="!gameHasEnded ? verifyPiece($event) : null" v-bind:style="stylePiece3"><p class="number">3</p></div>
+                <div class="piece" id="piece4" @mouseover="mouseOver($event)" @mouseleave="mouseLeave($event)" @click="!gameHasEnded ? verifyPiece($event) : null" v-bind:style="stylePiece4"><p class="number">4</p></div>
+                <div class="piece" id="piece5" @mouseover="mouseOver($event)" @mouseleave="mouseLeave($event)" @click="!gameHasEnded ? verifyPiece($event) : null" v-bind:style="stylePiece5"><p class="number">5</p></div>
+                <div class="piece" id="piece6" @mouseover="mouseOver($event)" @mouseleave="mouseLeave($event)" @click="!gameHasEnded ? verifyPiece($event) : null" v-bind:style="stylePiece6"><p class="number">6</p></div>
+                <div class="piece" id="piece7" @mouseover="mouseOver($event)" @mouseleave="mouseLeave($event)" @click="!gameHasEnded ? verifyPiece($event) : null" v-bind:style="stylePiece7"><p class="number">7</p></div>
+                <div class="piece" id="piece8" @mouseover="mouseOver($event)" @mouseleave="mouseLeave($event)" @click="!gameHasEnded ? verifyPiece($event) : null" v-bind:style="stylePiece8"><p class="number">8</p></div>
+                <div class="piece" id="piece9" v-bind:style="stylePiece9"><p class="number"></p></div>
+                
+                <div class="gameInfo">
+                    <p>Moves: {{ moves }} <span v-show="gameHasEnded">-- Done!!!</span> </p>
+                    <p v-show="!gameHasEnded">Time: {{ time }}</p>
+                    <p v-show="gameHasEnded">Start Time: {{ initialTime }}</p>
+                    <p v-show="gameHasEnded">End Time: {{ endTime }}</p>
+                    <button @click="restartGame()">Restart Game</button>
+                </div>
+            </div>
+        </div>
+        
+        <script src="https://cdn.jsdelivr.net/npm/vue@2.5.13/dist/vue.js"></script>
+        <script src="https://unpkg.com/vuetify/dist/vuetify.js"></script>
+        <script src="assets/js/slidingPuzzle.js"></script>
+    </body>
+    
+</html>
