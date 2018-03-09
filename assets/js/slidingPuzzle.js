@@ -82,6 +82,7 @@ new Vue({
                     return true;
                 }
             }
+            return false;
         },
         mouseOver: function(event){
             let pieceId = event.currentTarget.id;
@@ -136,6 +137,7 @@ new Vue({
                 this.movePiece(piece.id);
                 this.moves++;
                 this.updateNeighbors(piece);
+                this.updatePiecesPosition(piece.id);
                 this.verifyPositions();
             }
         },
@@ -201,12 +203,11 @@ new Vue({
             piece.neighbors = neighbors;
             
             this.updateAllNeighbors(piece.id);
-            this.updatePiecesPosition(piece.id);
         },
         updateAllNeighbors: function(pieceId) {
             for(let ind = 0; ind < this.pieces.length; ind++){
                 for(let index = 0; index < this.pieces[ind].neighbors.length; index++){
-                    // Invert the neighbor pieces
+                    // Invert the neighbors pieces
                     if (this.pieces[ind].neighbors[index] == pieceId) {
                         this.pieces[ind].neighbors[index] = 'piece9';
                     }else if (this.pieces[ind].neighbors[index] == 'piece9') {
